@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-fon-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'inter';
+  background: #292738;
+}
+
+.box {
+  padding: 2.9rem 4.8rem;
+  background: #363447;
+  box-shadow: .3rem .4rem 2.6rem rgba(0, 0, 0, 0.25);
+  border-radius: 1.6rem;
+  color: white;
+  line-height: 160%;
+  gap: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#app {
+  column-gap: 3.2rem;
+  width: fit-content;
+  min-height: 100vh;
+  height: fit-content;
+  margin: auto;
+  place-content: center;
+  padding: 3.2rem;
+}
+
+
+
+
+
+.top {
+  font-weight: 600;
+  font-size: 2.4rem;
+
+}
+
+.middle {
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.middle .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content h3 {
+  font-size: 3.4rem;
+}
+
+.content p {
+  font-size: 2.1rem;
+}
+
+.bottom {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: auto;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.bottom .item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bottom .item span:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.bottom .item span {
+  --bg-color: #4a4556;
+}
+
+.bottom .item span:nth-child(1)::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  background: var(--bg-color);
+  border-radius: 999px;
+}
+
+.nps {
+
+  gap: 3.2rem;
+
+}
+
+.nps .middle {
+  height: 19.7rem;
+  place-content: center;
+  justify-items: center;
+  gap: 1.6rem;
+  color: #81fbb8;
+}
+
+.nps .bottom {
+  gap: 1rem;
+}
+
+svg {
+  --percentage: 0;
+  width: 19.7rem;
+  height: 19.7rem;
+  transform: rotate(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 618;
+  stroke-dashoffset: 618;
+  stroke-width: 35;
+  fill: none;
+}
+
+svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+}
+
+svg circle:nth-child(2) {
+  stroke-dashoffset: calc(618 - (618*var(--percentage))/100);
+  stroke-linecap: round;
+  animation: progress 1.5s ease-in-out;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 618;
+    stroke-dashoffset: 618;
+  }
+}
+
+
+.weekly-sell {
+  gap: 3.2rem;
+
+}
+
+.weekly-sell .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+}
+
+.weekly-sell .left {
+  gap: 3.2rem;
+  grid-auto-flow: column;
+
+}
+
+.weekly-sell .left,
+.weekly .right {
+  flex: 1;
+}
+
+.left .grid {
+  gap: .8rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.left .grid span {
+  font-size: 1.4rem;
+  align-items: center;
+  display: flex;
+  gap: .4rem;
+}
+
+.left .grid span::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+
+  display: block;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.left .most-sell span::before {
+  background: linear-gradient(180deg, #81FBB8 0%, #28C76F 100%);
+  margin-top: .4rem;
+}
+
+.left .less-sell span::before {
+  background: linear-gradient(180deg, #EA5455 0%, #FEB692 100%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  margin-top: .6rem;
+}
+
+.bars {
+  display: flex;
+  gap: calc(3vw + 1rem);
+  align-items: flex-end;
+  position: relative;
+}
+
+.bars::before {
+  content: "";
+  display: block;
+  height: .3rem;
+  width: 100%;
+  background: #4a4556;
+  border-radius: 999px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.bar-wrapper {
+  display: grid;
+  grid-template-rows: 15.9rem 1.6rem;
+  justify-items: center;
+  gap: .5rem;
+  z-index: 1;
+}
+
+.bar {
+  width: 1.5rem;
+  background: linear-gradient(180deg, #90f7ec 0%, #32ccbc 100%);
+  border-radius: 999px;
+  height: var(--height);
+  animation: up 1.5s;
+  align-self: end;
+}
+
+@keyframes up {
+  0% {
+    height: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #app {
+    grid-template-columns: 29.6rem max-content max-content;
+    grid-template-rows: max-content;
+  }
+
+  .box:nth-child(4) {
+    grid-column: 1/4;
+  }
+
+  .weekly-sell .wrapper {
+    flex-direction: row;
+  }
+
+  .weekly-sell .left {
+    grid-auto-flow: initial;
+  }
+
+  .bars {
+    gap: 5.9rem;
+  }
+
+  .weekly-sell {
+    margin-top: 3.2rem;
+
+  }
+}
