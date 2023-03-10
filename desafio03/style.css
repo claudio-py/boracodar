@@ -33,6 +33,9 @@ body {
   --bg-default:transparent;
   --bg-hover:transparent;
 }
+.tertiary:hover{
+  border: 2px solid white;
+}     
 button{
   display: flex;
   background-color: var(--bg-default);
