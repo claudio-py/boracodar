@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-fon-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #1a1924;
+    color: #e1e1e6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body* {
+    font-family: 'Roboto' sans-serif;
+}
+
+#app {
+    padding: 2.4rem 3.2rem;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    max-width: 880px;
+    margin: auto;
+}
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+#user-info img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#user-status .status {
+    display: flex;
+    align-items: baseline;
+    gap: .4rem;
+    margin-top: .4rem;
+    color: #00b37e;
+    font-size: 1.2rem;
+}
+
+#user-status .status::before {
+    content: "";
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    background-color: #00b37e;
+    border-radius: 50%;
+}
+
+
+#last-seen {
+    margin-top: 2.6rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+}
+#messages{
+    overflow-y: scroll;
+    padding-bottom: 2.4rem;
+}
+#messages::-webkit-scrollbar{
+    display: none;
+}
+.messages {
+    margin-top: 3rem;
+    display: grid;
+    gap: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    
+}
+
+
+
+
+
+.message .body {
+    margin-top: 1rem;
+    background-color: #633bbc;
+    padding: 1.4rem;
+    border-radius: 0 1.3rem 1.3rem 1.3rem;
+    width: fit-content;
+}
+
+.message:not(.you) {
+    width: 40vw;
+}
+
+.message.you {
+    margin-left: auto;
+}
+
+.message.you .top {
+    text-align: right;
+}
+
+.message.you .body {
+    background-color: #07847e;
+    border-radius: 1.3rem 1.3rem 0 1.3rem;
+}
+form{
+    display: flex;
+    align-items:center ;
+    background: #282843;
+    border-radius: 999px;
+    padding: 14px 24px;
+}
+input{
+    flex: 1;
+    outline: none;
+    color: #e1e1e6;
+}
+form:focus-within{
+outline: 2px solid white;
+}
+input::placeholder{
+    color: #e1e1e6;
+font-size: 1.8rem;
+line-height: 2rem;
+    
+}
+button i{
+color: #e1e1e6;
+font-size: 2.4rem;    
+}
+input, button{
+    background-color: transparent;
+    border: 0;
+}
