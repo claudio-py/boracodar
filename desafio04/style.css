@@ -76,20 +76,23 @@ body* {
     line-height: 1.4rem;
     text-align: center;
 }
-#messages{
+
+#messages {
     overflow-y: scroll;
     padding-bottom: 2.4rem;
 }
-#messages::-webkit-scrollbar{
+
+#messages::-webkit-scrollbar {
     display: none;
 }
+
 .messages {
     margin-top: 3rem;
     display: grid;
     gap: 3rem;
     font-size: 1.2rem;
     line-height: 1.4rem;
-    
+
 }
 
 
@@ -120,32 +123,39 @@ body* {
     background-color: #07847e;
     border-radius: 1.3rem 1.3rem 0 1.3rem;
 }
-form{
+
+form {
     display: flex;
-    align-items:center ;
+    align-items: center;
     background: #282843;
     border-radius: 999px;
     padding: 14px 24px;
 }
-input{
+
+input {
     flex: 1;
     outline: none;
     color: #e1e1e6;
 }
-form:focus-within{
-outline: 2px solid white;
+
+form:focus-within {
+    outline: 2px solid white;
 }
-input::placeholder{
+
+input::placeholder {
     color: #e1e1e6;
-font-size: 1.8rem;
-line-height: 2rem;
-    
+    font-size: 1.8rem;
+    line-height: 2rem;
+
 }
-button i{
-color: #e1e1e6;
-font-size: 2.4rem;    
+
+button i {
+    color: #e1e1e6;
+    font-size: 2.4rem;
 }
-input, button{
+
+input,
+button {
     background-color: transparent;
     border: 0;
 }
