@@ -8,8 +8,149 @@
 
 :root {
   font-size: 62.5%;
+  font-family: 'Roboto';
 }
 
 body {
   font-size: 1.6rem;
+}
+
+input,
+select,
+button {
+  font-family: 'Roboto';
+  all: unset;
+}
+
+header {
+  min-height: 53.2rem;
+  background-color: #f8f8ff;
+
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+
+}
+
+header .content.top {
+  text-align: center;
+}
+
+header::before {
+  content: "";
+
+  background-image: url(./assets/bg-headertop.svg);
+  width: 40.7rem;
+  height: 34.5rem;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+header::after {
+  content: "";
+  background-image: url(./assets/bg-header-bottom.svg);
+  width: 41.4rem;
+  height: 33rem;
+  position: absolute;
+  right: 0;
+  bottom: -1.2rem;
+
+}
+
+header .content {
+  width: fit-content;
+
+  position: relative;
+  z-index: 1;
+}
+
+header p {
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #e45858;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4.8rem;
+  line-height: 125%;
+  color: #121214;
+  max-width: 64.7rem;
+  margin: 1.8rem auto 0;
+}
+
+header h1 span {
+  color: #6246ea;
+}
+
+form {
+  margin-top: 4rem;
+  display: flex;
+  padding: 4rem;
+  gap: 2.4rem;
+  background: white;
+  border-radius: 10px;
+  border: 0.1rem solid #eaeaea;
+}
+
+form button {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3.2rem;
+  gap: 0.8rem;
+  background: #6246ea;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background .5s;
+}
+
+button:hover {
+  background: #472ec3;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+input {}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #f4f4ff;
+  border-radius: .5rem;
+  padding: 1.2rem 8rem 1.2rem 1.4rem;
+}
+
+input,
+select {
+  color: #7c7c8a;
+
+  min-width: 29rem;
+}
+
+.search-field i {
+  font-size: 2.4rem;
+  color: #e45858;
 }
