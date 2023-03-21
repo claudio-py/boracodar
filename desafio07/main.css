@@ -86,7 +86,26 @@ color: #e45858;
 font-size: 2.4rem;
 opacity: 1;
 }
+main {
+  padding-inline: 4rem;
+}
 
+
+
+ @media (max-width: 870px) {
+  header .content {
+    padding: 4rem;
+  }
+
+  header form {
+    flex-direction: column;
+  }
+}
+@media (max-width: 660px){
+  section.cards{
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 
 

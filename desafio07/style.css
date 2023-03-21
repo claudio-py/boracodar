@@ -4,6 +4,7 @@
   box-sizing: border-box;
   -webkit-fon-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 :root {
@@ -81,11 +82,16 @@ header h1 {
   line-height: 125%;
   color: #121214;
   max-width: 64.7rem;
-  margin: 1.8rem auto 0;
+  margin: 1.8rem auto;
 }
 
 header h1 span {
   color: #6246ea;
+}
+
+div.content h1 {
+  padding: 2rem;
+  text-align: center;
 }
 
 form {
@@ -157,5 +163,31 @@ select {
   position: absolute;
   right: 8rem;
   z-index: 0;
+
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+
+  header::before {
+    background-size: 30vw;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 500px) {
+  section.cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card {
+    max-width: 100%;
+  }
 
 }
