@@ -99,25 +99,13 @@ form {
 }
 
 form button {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1.2rem 3.2rem;
-  gap: 0.8rem;
-  background: #6246ea;
-  border-radius: 0.5rem;
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background .5s;
+
 }
 
-button:hover {
+.primary:hover {
   background: #472ec3;
+  color: #fff;
 }
 
 .sr-only {
@@ -132,7 +120,7 @@ button:hover {
   border-width: 0;
 }
 
-input {}
+
 
 .search-field {
   display: flex;
@@ -153,4 +141,21 @@ select {
 .search-field i {
   font-size: 2.4rem;
   color: #e45858;
+}
+
+select,
+.select {
+  position: relative;
+
+}
+
+select {
+  z-index: 1;
+}
+
+.select i.ph-caret-down {
+  position: absolute;
+  right: 8rem;
+  z-index: 0;
+
 }
